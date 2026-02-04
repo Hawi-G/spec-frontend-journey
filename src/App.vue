@@ -1,3 +1,7 @@
+<script setup>
+const name="SPEC Developer"
+</script>
+
 <template>
-  <h1>Hello SPEC Developers</h1>
+  <h1>Hello {{name}}</h1>
 </template>
