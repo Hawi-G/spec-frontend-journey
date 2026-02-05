@@ -6,26 +6,6 @@
   </div>
 </template>
 
-<script>
-import UserCard from "./component/UserCard.vue";
-
-export default {
-  components: {
-    UserCard
-  }
-};
+<script setup>
+import UserCard from './components/UserCard.vue'
 </script>
-
-<style>
-body {
-  background-color: #0b0615;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  height: 100vh; 
-}
-</style>
