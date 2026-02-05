@@ -1,24 +1,31 @@
 <template>
-  <div>
-    <h2>Conditional Greeting App</h2>
-
-    <input
-      v-model="name"
-      type="text"
-      placeholder="Type your name"
-    />
-
-    <p v-if="name">Hello, {{ name }}!</p>
+  <div class="container">
+    <UserCard name="Sumeya" role="Frontend developer" />
+    <UserCard name="Shalom" role="UI/UX designer" />
+    <UserCard name="Koket" role="Backend developer" />
   </div>
 </template>
 
 <script>
+import UserCard from "./component/UserCard.vue";
+
 export default {
-  data() {
-    return {
-      name: ''
-    }
+  components: {
+    UserCard
   }
-}
+};
 </script>
 
+<style>
+body {
+  background-color: #0b0615;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  height: 100vh; 
+}
+</style>
