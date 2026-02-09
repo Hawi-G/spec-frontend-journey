@@ -1,19 +1,30 @@
 <template>
   <div>
-    <h2>Counter</h2>
-    <h1>{{ count }}</h1>
-    <button @click="increment">+</button>
-    <button @click="decrement" :disabled="count === 0">-</button>
+    <h2>Password Strength Checker</h2>
+
+    <input
+      type="password"
+      v-model="password"
+      placeholder="Enter password"
+    />
+
+    <p>{{ strength }}</p>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-const count = ref(0)
-function increment() {
-  count.value++
-}
-function decrement() {
-  count.value--
-}
+import { ref, watch } from 'vue'
+
+const password = ref('')
+const strength = ref('')
+
+watch(password, (newPassword) => {
+  if (newPassword.length < 6) {
+    strength.value = 'Weak'
+  } else if (/[0-9]/.test(newPassword) && /[^a-zA-Z0-9]/.test(newPassword)) {
+    strength.value = 'Strong'
+  } else {
+    strength.value = 'Medium'
+  }
+})
 </script>
