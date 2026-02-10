@@ -1,8 +1,8 @@
 <template>
     <div>
 <h2>Home</h2>
-<p>HelloSPEC Devs!</p>
-<NuxtLink to="/about">About Page</NuxtLink>
+<p>Hello SPEC Devs!</p>
+
     </div>
 </template>
 
