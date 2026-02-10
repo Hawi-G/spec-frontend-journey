@@ -20,8 +20,8 @@
 .nav-link {
   margin-right: 1rem;
   font-weight: bold;
-  color: black;
-  text-decoration: none;
+  color: rgb(212, 111, 230);
+  text-decoration: underline;
 }
 
 .nav-link:hover {
