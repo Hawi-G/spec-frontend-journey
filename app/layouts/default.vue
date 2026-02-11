@@ -3,6 +3,8 @@
     <nav class="navbar">
       <NuxtLink to="/" class="nav-link">Home</NuxtLink>
       <NuxtLink to="/about" class="nav-link">About</NuxtLink>
+      <NuxtLink to="/products" class="nav-link">Products</NuxtLink>
+
     </nav>
 
     <slot />
@@ -12,19 +14,21 @@
 
 <style scoped>
 .navbar {
+  display: flex;              
+  justify-content: flex-end;  
+  align-items: center;       
   padding: 1rem;
-  background-color: #E6E6FA; 
+  background-color: #e3c0da;
   border-bottom: 1px solid #ccc;
 }
 
 .nav-link {
-  margin-right: 1rem;
+  margin-left: 1rem;
   font-weight: bold;
-  color: rgb(212, 111, 230);
+  color: rgb(91, 35, 101);
   text-decoration: underline;
 }
 
-.nav-link:hover {
-  text-decoration: underline;
-}
+
+
 </style>
